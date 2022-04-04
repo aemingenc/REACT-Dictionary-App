@@ -3,6 +3,7 @@ import { Container } from '@mui/material';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css';
+import Definations from './components/Definations/Definations';
 import Header from './components/Header/Header';
 
 function App() {
@@ -38,7 +39,8 @@ function App() {
           word = {word}
           setWord= {setWord}
           />
-          dict</Container>
+          {meanings && <Definations word ={word} meanings= {meanings} category = {category}/>}
+          </Container>
     </div>
   );
 }
