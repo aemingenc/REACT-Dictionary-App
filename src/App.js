@@ -29,7 +29,7 @@ function App() {
   return (
     <div 
       className="App"
-      style={{height:"100vh",backgroundColor:"yellow",color:"black"}}>
+      style={{height:"100vh",backgroundColor:"black",color:"white"}}>
       <Container 
         maxWidth="md"
         style={{display:"flex",flexDirection:"column",height:"100vh"}}>

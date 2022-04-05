@@ -4,6 +4,11 @@ import "./Header.css"
 import categories from "../../data/category"
 
 const Header = ({category,setCategory,word,setWord}) => {
+    const darkTheme = createTheme({
+        palette: {
+          mode: 'dark',
+        },
+      });
 
     const handleChange=(language) =>{
         setCategory(language);
@@ -13,9 +18,9 @@ const Header = ({category,setCategory,word,setWord}) => {
     <div className='header'>
     
 
-        <span className='title'>{word ? word:"Word Hunt"}</span>
+        <span className='title'>{word ? word:"A.E.G"}</span>
         <div className='inputs'>
-            
+            <ThemeProvider theme={darkTheme}>
                 <TextField  
                 className='search'
                 label="Search a Word" 
@@ -37,7 +42,7 @@ const Header = ({category,setCategory,word,setWord}) => {
                         ))}
                     ))
                 </TextField>
-
+                </ThemeProvider>
         </div>
     </div>
   )
